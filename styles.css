@@ -39,6 +39,7 @@ header p {
     margin: 10px 0;
 }
 
+/* Section Styling */
 section {
     padding: 20px;
     background: #fff;
@@ -56,21 +57,26 @@ section h2 {
     text-transform: uppercase;
 }
 
+/* Image Container */
 .image-container img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    object-fit: cover;
 }
 
+/* Institutions Section */
 .institutions {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .institution {
     text-align: center;
     margin: 10px;
+    flex: 1 1 250px;  /* Ensure the items are flexible and responsive */
 }
 
 .logo-container img {
@@ -114,12 +120,15 @@ section h2 {
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .project img {
-    max-width: 60px;
-    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
     border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
 }
 
 /* Achievements Section */
@@ -165,4 +174,40 @@ footer p {
 footer a {
     color: #007bff;
     text-decoration: none;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        flex: 1 1 100%;
+        max-width: 600px;
+    }
+
+    .institutions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .institution {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    .project {
+        flex: 1 1 100%;
+    }
 }
